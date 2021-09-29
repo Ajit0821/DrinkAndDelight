@@ -46,7 +46,7 @@ class IServiceTest {
 
 	@Test
 	void testTrackRawMaterialOrder() {
-		RawMaterial rm1=service.addRawMaterials(new RawMaterial(7, "Wire", 432, 4,null,null,null,"Delivered"));
+		RawMaterial rm1=service.addRawMaterials(new RawMaterial(8, "Wire", 432, 4,null,null,null,"Delivered"));
 		RawMaterial rm=service.trackRawMaterialOrder(rm1.getProductId());
 	    assertEquals(rm1.getProductName(),rm.getProductName());
 		

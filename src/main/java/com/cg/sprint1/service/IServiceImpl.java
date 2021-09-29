@@ -78,7 +78,7 @@ public class IServiceImpl implements IService{
 	{
 		Optional<Product> op=pDao.findById(pId);
 		if(!op.isPresent())
-			throw new ProductException("No Raw Material Found For Product id: "+pId);
+			throw new ProductException("No Product Found For Product id: "+pId);
 		return  op.get();
 	}
 
@@ -105,7 +105,7 @@ public class IServiceImpl implements IService{
 		Optional<Product> op=pDao.findById(pId);
 		Product prod=null;
 		if(!op.isPresent())
-			throw new ProductException("No Raw Material Found For Product id: "+pId);
+			throw new ProductException("No Product Found For Product id: "+pId);
 		else
 		{
 			prod=op.get();
